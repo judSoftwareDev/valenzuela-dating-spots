@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.shutterstock.com/image-vector/vector-pink-heart-location-pin-600nw-2463729733.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Val Dating Spots</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR SECTION CODE: -->
+
+    <nav>
+        <div class="navbar-logo-title">
+            <img src="https://www.shutterstock.com/image-vector/vector-pink-heart-location-pin-600nw-2463729733.jpg" alt="Heart Location Logo" class="navbar-logo">
+            <a href="#home">
+                <h1>Valenzuela Dating Spots</h1>
+            </a>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#invitation">My Invitation</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#tiktok">Tiktok Videos</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME SECTION CODE: -->
+
+    <section class="home" id="home">
+        <h2>Welcome to Valenzuela’s Perfect Dating Spots</h2>
+        <p>The purpose of this website is to invite my girlfriend (Sweetzel) to a fancy and elegant dining spot in Valenzuela City. 
+            It highlights the aesthetic café, the cozy spaces, and most of all, the special moments we share while enjoying our food together. 
+            I hope this little gesture makes you smile and that you’ll love it as much as I love creating it for you.</p>
+        <a href="#invitation" class="btn">Let's Get Started!</a>
+    </section>
+
+    <!-- INVITATION SECTION CODE: -->
+
+    <section class="invitation" id="invitation">
+        <h2>You're Invited</h2>
+        <p>Click the ‘See Invitation’ link to view my special invitations for you. There, you can check from time 
+            to time the available dates when we can go to a romantic place together. This feature also lets you read 
+            my personal invitation message, made just for you.</p>
+        <a href="invitation_message.html" class="btn">See Invitation</a>
+    </section> 
+
+    <!-- LOCATION SECTION CODE: -->
+    <section class="location" id="location">
+        <h2>Find a Location</h2>
+        <div class="map-search-bar">
+            <input type="text" id="mapSearchInput" placeholder="Search for a place in Valenzuela...">
+            <button id="mapSearchBtn">Search</button>
+        </div>
+        <div class="map">
+            <iframe id="mapIframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.9944906621614!2d120.982!3d14.701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b1f1d7b6b9b7%3A0xf56f6a12f6!2sValenzuela%20City!5e0!3m2!1sen!2sph!4v1618312159871!5m2!1sen!2sph" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <script>
+        document.getElementById('mapSearchBtn').addEventListener('click', function() {
+            var query = document.getElementById('mapSearchInput').value.trim();
+            if (query) {
+                var mapIframe = document.getElementById('mapIframe');
+                var url = 'https://www.google.com/maps?q=' + encodeURIComponent(query + ', Valenzuela City') + '&output=embed';
+                mapIframe.src = url;
+            }
+        });
+        document.getElementById('mapSearchInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('mapSearchBtn').click();
+            }
+        });
+        </script>
+    </section>
+
+    <footer>
+        <p>&copy; Made with Love by Juds | 2025. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
