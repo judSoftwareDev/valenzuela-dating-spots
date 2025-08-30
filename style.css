@@ -294,9 +294,8 @@ footer {
   display: none; /* keep them hidden inside the card */
 }
 
-/* ========================== */
-/* 💖 Romantic Popup Modal CSS */
-/* ========================== */
+/* Popup Modal CSS */
+
 .modal {
   display: none;
   position: fixed;
@@ -382,9 +381,7 @@ footer {
   50% { transform: translateY(-8px); }
 }
 
-/* ========================== */
-/* ✨ Formal Message Styling ✨ */
-/* ========================== */
+/* Formal Message Styling */
 .message p {
   margin-bottom: 1rem;
 }
