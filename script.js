@@ -7,8 +7,8 @@ const buttons = document.querySelectorAll(".rsvp-btn");
 buttons.forEach(btn => {
   btn.addEventListener("click", (e) => {
     const card = e.target.closest(".invitation-card");
-    const message = card.querySelector(".message").innerHTML.trim(); // ✅ preserve HTML
-    modalMessage.innerHTML = message; // ✅ inject HTML
+    const message = card.querySelector(".message").innerHTML.trim(); //preserve HTML
+    modalMessage.innerHTML = message; //inject HTML
     modal.style.display = "flex";
   });
 });
