@@ -21,6 +21,32 @@ html{
     font-size: 90%;
     overflow-x: hidden;
 }
+  /* Scroll Animation Classes */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+    will-change: opacity, transform;
+  }
+  .scroll-animate.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  /* Optionally, for cards */
+  .invitation-card.scroll-animate {
+    transition-delay: 0.1s;
+  }
 
 /* Navbar Code*/
 nav {
@@ -430,7 +456,7 @@ footer {
   list-style-type: disc;
 }
 
-/* === Additions for modal message formatting === */
+/* Additions for modal message formatting */
 .modal-message {
   text-align: left;
   font-style: normal;
